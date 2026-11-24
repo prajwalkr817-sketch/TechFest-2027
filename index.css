@@ -1,0 +1,347 @@
+:root {
+  --bg-main: #0c1021;
+  --bg-card: #151b33;
+  --bg-elevated: #1e2747;
+  --border: #2c375e;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --coral: #ff6b57;
+  --mint: #38e8c6;
+  --gold: #ffd166;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.brand img {
+  height: 44px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.brand-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.brand-text span {
+  color: var(--coral);
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--bg-elevated);
+  color: var(--mint);
+}
+
+/* Main Layout */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.45rem;
+  margin-bottom: 16px;
+  color: var(--mint);
+  font-family: "Courier New", Courier, monospace;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+/* Hero Banner (Home Page) */
+.hero {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1.4;
+  min-width: 280px;
+}
+
+.badge {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  color: var(--mint);
+  background-color: rgba(56, 232, 198, 0.12);
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.hero-logo-box {
+  flex: 0.8;
+  min-width: 220px;
+  text-align: center;
+}
+
+.hero-logo-box img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+
+/* Medium-Sized Buttons */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--coral);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: var(--bg-elevated);
+  color: var(--mint);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--mint);
+}
+
+/* Info Grid & Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: var(--bg-elevated);
+  color: var(--mint);
+  font-family: "Courier New", Courier, monospace;
+}
+
+td {
+  color: var(--text-main);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.break-cell {
+  background-color: rgba(255, 209, 102, 0.12);
+  color: var(--gold);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Media Embeds */
+.media-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.video-frame {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 8px;
+  display: block;
+  margin-top: 12px;
+}
+
+audio {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+/* Registration Form */
+form {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  max-width: 720px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label.field-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.option-list label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--mint);
+  text-decoration: none;
+}

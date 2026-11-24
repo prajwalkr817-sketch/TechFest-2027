@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechFest 2027 | Register</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="TechFest 2027 logo.png" alt="TechFest 2027 Logo">
+        <span class="brand-text">TECHFEST <span><2027/></span></span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="register.html" class="active">Register</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1>Participant Registration</h1>
+      <p>Fill out the form below to register for TechFest 2027 events.</p>
+
+      <form action="#" method="post">
+        <div class="form-group">
+          <label class="field-label" for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="department">Department</label>
+          <select id="department" name="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="cse">Computer Science & Engineering</option>
+            <option value="aiml">AI & Machine Learning</option>
+            <option value="ece">Electronics & Communication</option>
+            <option value="me">Mechanical Engineering</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <span class="field-label">Year of Study</span>
+          <div class="option-list">
+            <label><input type="radio" name="year" value="1st" required> 1st Year</label>
+            <label><input type="radio" name="year" value="2nd"> 2nd Year</label>
+            <label><input type="radio" name="year" value="3rd"> 3rd Year</label>
+            <label><input type="radio" name="year" value="4th"> 4th Year</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <span class="field-label">Event Preferences</span>
+          <div class="option-list">
+            <label><input type="checkbox" name="events" value="code-sprint"> Code Sprint 24</label>
+            <label><input type="checkbox" name="events" value="webcraft"> WebCraft UI Jam</label>
+            <label><input type="checkbox" name="events" value="bug-hunt"> Bug Hunt Arena</label>
+            <label><input type="checkbox" name="events" value="robomaze"> RoboMaze Challenge</label>
+            <label><input type="checkbox" name="events" value="tech-pitch"> Tech Pitch & Demo Day</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="notes">Team Details or Additional Notes</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Share teammate names or any special requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>TechFest 2027 • <a href="contact.html">Need Help? Contact Us</a></p>
+  </footer>
+</body>
+</html>

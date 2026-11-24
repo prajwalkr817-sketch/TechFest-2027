@@ -1,0 +1,160 @@
+:root {
+  --bg-main: #0c1021;
+  --bg-card: #151b33;
+  --bg-elevated: #1e2747;
+  --border: #2c375e;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --coral: #ff6b57;
+  --mint: #38e8c6;
+  --gold: #ffd166;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.brand img {
+  height: 44px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.brand-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.brand-text span {
+  color: var(--coral);
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--bg-elevated);
+  color: var(--mint);
+}
+
+/* Schedule Layout */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Timetable Styling */
+.table-wrap {
+  overflow-x: auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+thead th {
+  background-color: var(--bg-elevated);
+  color: var(--mint);
+  font-family: "Courier New", Courier, monospace;
+}
+
+tbody th {
+  background-color: rgba(30, 39, 71, 0.6);
+  color: var(--text-main);
+  font-family: "Courier New", Courier, monospace;
+  white-space: nowrap;
+}
+
+.break-cell {
+  background-color: rgba(255, 209, 102, 0.14);
+  color: var(--gold);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 24px;
+  margin-top: 48px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--mint);
+  text-decoration: none;
+}
